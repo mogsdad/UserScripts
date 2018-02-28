@@ -138,14 +138,16 @@ with_jquery(function($) { $(function () {
     function backspaceHandler() {
         var jThis = $(this),
             oldMarkdown = this.value || "",
-            selection = jThis.caret(),
+            selection = getSelection(jThis),
             preCursorMarkdown = oldMarkdown.substring(0, selection.end),
             lastLine = (preCursorMarkdown.match(/(?:^|\n)([^\n]*)$/) || ["", ""])[1];
-        
-        // If there's only whitespace before the cursor on the current line, backspace behaves like
-        // Shift-Tab. Otherwise, it has native behavior.
-        if (/^[ \t]+$/.test(lastLine)) {
-            return tabHandler.call(this, true);
+
+        if (selection.start === selection.end) {  // Cursor only, no selection
+            // If there's only whitespace before the cursor on the current line, backspace behaves like
+            // Shift-Tab. Otherwise, it has native behavior.
+            if (/^[ \t]+$/.test(lastLine)) {
+                return tabHandler.call(this, true);
+            }
         }
         return true;
     }
