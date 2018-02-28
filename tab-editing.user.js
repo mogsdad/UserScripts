@@ -1,25 +1,17 @@
 // ==UserScript==
 // @name           stackexchange-tab-editing
+// @version        2.0.0
 // @description    Make the tab, home, and backspaces keys in the StackExchange post editor behave more like in a good text editor
-// @include        http://stackoverflow.com/*
-// @include        http://*.stackoverflow.com/*
-// @include        http://serverfault.com/*
-// @include        http://superuser.com/*
-// @include        http://meta.stackoverflow.com/*
-// @include        http://meta.serverfault.com/*
-// @include        http://meta.superuser.com/*
-// @include        http://stackapps.com/*
-// @include        http://*.stackexchange.com/*
-// @include        http://askubuntu.com/*
-// @include        http://meta.askubuntu.com/*
-// @include        http://answers.onstartups.com/*
-// @include        http://meta.answers.onstartups.com/*
-// @include        http://mathoverflow.net/*
-// @include        http://local.mso.com/*
-// @exclude        http://chat.*
-// @exclude        http://blog.*
-// @exclude        http://careers.stackoverflow.com.*
+// @include        /^https?:\/\/\w*.?(stackoverflow|stackexchange|serverfault|superuser|askubuntu|stackapps)\.com\/*
+// @include        https://answers.onstartups.com/*
+// @include        https://meta.answers.onstartups.com/*
+// @include        https://mathoverflow.net/*
+// @include        https://local.mso.com/*
+// @exclude        https://chat.*
+// @exclude        https://blog.*
+// @exclude        https://careers.stackoverflow.com.*
 // @author         Benjamin Dumke-von der Ehe
+// @contributor    Mogsdad
 // ==/UserScript==
 
 // (c) 2012 Benjamin Dumke-von der Ehe
